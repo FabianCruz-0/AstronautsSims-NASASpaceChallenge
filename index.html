@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+
+	<link rel="shortcut icon" href="public/icon.png" type="image/x-icon">
+
+	<title>Astronauts - Team marcianos</title>
+</head>
+
+<body>
+	<canvas id="main"></canvas>
+
+	<!-- Kaboom 5.0 -->
+	<script src="lib/kaboom.js">
+
+	</script>
+
+	<!-- Script where kaboom is initialized -->
+	<script type="module" src="config.js"></script>
+
+  <!-- Win scene -->
+  <script type="module" src="scenes/winScene.js"></script>
+
+	<!-- Scene of main game -->
+	<script type="module" src="scenes/game.js"></script>
+
+	<!-- Scene of Principal Menu -->
+	<script type="module" src="scenes/principalMenu.js"></script>
+
+  <!-- Game Over scene -->
+<script type="module" src="scenes/gameOver.js"></script>
+
+<!-- Tutorial scene -->
+<script type="module" src="scenes/tutorial.js"></script>
+
+<!-- Credits scene -->
+<script type="module" src="scenes/credits.js"></script>
+
+<!-- Arrival To Mars scene -->
+<script type="module" src="scenes/ArrivalToMars.js"></script>
+
+<!-- stats for player 1 -->
+<div id="gui">
+	<div class="divStats1">
+		<table>
+			<tr>
+				<td class="playerIdentity">
+					<img src="sprites/astronaut.png" alt="" class="playerImg">
+          <br>
+          <center>
+            Eva
+          </center>
+          </td>
+
+        <td>
+          <div class="barsContainer">
+            <span>Hunger:  <progress id="HungerStatHTML" max="300" value="20" class="bar"></progress></span>
+            <span>Mental Health:  <progress id="mentalHealthStatHTML" max="300" value="20" class="bar"></progress></span>
+            <span>Exercise:  <progress id="ExerciseStatHTML" max="300" value="1" class="bar"></progress></span>
+            <span>Bathroom:  <progress id="BathroomStatHTML" max="300" value="20" class="bar"></progress></span>
+            <span>Medicine:  <progress id="MedicineStatHTML" max="300" value="20" class="bar"></progress></span>
+            <span>Sleep:  <progress id="SleepStatHTML" max="300" value="20" class="bar"></progress></span>
+          </div>
+        </td>
+      </tr>
+    </table>
+</div>
+
+<!-- stats for player 2 -->
+
+<div class="divStats2">
+		<table>
+			<tr>
+				<td class="playerIdentity">
+					<img src="sprites/astronaut2.png" alt="" class="playerImg">
+          <br>
+          <center>
+            David
+          </center>
+          </td>
+
+        <td>
+          <div class="barsContainer">
+            <span>Hunger:  <progress id="HungerStat2HTML" max="300" value="20" class="bar"></progress></span>
+            <span>Mental Health:  <progress id="mentalHealthStat2HTML" max="300" value="20" class="bar"></progress></span>
+            <span>Exercise:  <progress id="ExerciseStat2HTML" max="300" value="20" class="bar"></progress></span>
+            <span>Bathroom:  <progress id="BathroomStat2HTML" max="300" value="20" class="bar"></progress></span>
+            <span>Medicine:  <progress id="MedicineStat2HTML" max="300" value="20" class="bar"></progress></span>
+            <span>Sleep:  <progress id="SleepStat2HTML" max="300" value="20" class="bar"></progress></span>
+          </div>
+        </td>
+      </tr>
+    </table>
+</div>
+
+<!-- stats for player 3 -->
+<div class="divStats3">
+		<table>
+			<tr>
+				<td class="playerIdentity">
+					<img src="sprites/astronaut3.png" alt="" class="playerImg">
+          <br>
+          <center>
+            Mishima
+          </center>
+          </td>
+
+        <td>
+          <div class="barsContainer">
+            <span>Hunger:  <progress id="HungerStat3HTML" max="300" value="20" class="bar"></progress></span>
+            <span>Mental Health:  <progress id="mentalHealthStat3HTML" max="300" value="20" class="bar"></progress></span>
+            <span>Exercise:  <progress id="ExerciseStat3HTML" max="300" value="1" class="bar"></progress></span>
+            <span>Bathroom:  <progress id="BathroomStat3HTML" max="300" value="20" class="bar"></progress></span>
+            <span>Medicine:  <progress id="MedicineStat3HTML" max="300" value="20" class="bar"></progress></span>
+            <span>Sleep:  <progress id="SleepStat3HTML" max="300" value="20" class="bar"></progress></span>
+          </div>
+        </td>
+      </tr>
+    </table>
+</div>
+
+<!-- dialog pop up code -->
+<div class="dialog" id="dialog" onclick="closeDialog()" onmouseover="dialogHover()">
+    <center class="clickToClose">(click to close)</center>
+  <table>
+    <tr>
+      <td>
+        <img src="sprites/partner.png" alt="" class="imgDialog">
+        </td>
+      <td id="textDialog">
+        Initial Text
+      </td>
+    </tr>  
+  </table> 
+</div>
+
+
+<!-- Tutorial dialog pop up code -->
+<!-- <div class="dialog2" id="dialog2" onclick="closeDialog()" onmouseover="dialogHover()">
+    <center class="clickToClose2">(click to close)</center>
+  <table>
+    <tr>
+      <td>
+        <img src="sprites/partner.png" alt="" class="imgDialog2">
+        </td>
+      <td id="textDialog2">
+        Initial Text
+      </td>
+    </tr>  
+  </table> 
+</div> -->
+
+<!-- progress bar to planet -->
+<div class="progToPlanet" id="progToPlanet">
+  <img src="sprites/earth.png" alt="" width="50px">
+  <progress max="300" value="0" class="barToPlanet" id="barToPlanet"></progress>
+  <img src="sprites/mars.png" alt="" width="50px">
+</div>
+
+<div class="timeRemaining" id="timeRemaining">??? Days left
+</div>
+
+  <div class="options" id="options">
+   <table>
+     <tr>
+       <td class="exit" id="exit">
+         EXIT
+       </td>
+       <td class="sound" id="sound">
+         <img src="sprites/sound.png" alt="" width="20px">
+       </td>
+     </tr>
+   </table>
+  </div>
+
+
+</div>
+
+<script>
+
+  let dialog = document.getElementById('dialog');
+  function closeDialog() {
+    document.getElementById('dialog').classList.remove('visible');
+    document.getElementById('dialog').classList.add('hidden');
+  }
+
+  function dialogHover() {
+    dialog.style.cursor="pointer";
+  }
+
+</script>
+
+</body>
+
+</html>

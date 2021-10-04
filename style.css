@@ -1,0 +1,181 @@
+html,body{
+    overflow: hidden;
+    background-color: black;
+    font-family: 'karmafuture';
+    font-stretch: expanded;
+}
+body{
+    margin: 0;
+}
+
+.divStats1{
+  border: 1px solid white;
+  border-radius: 4px;
+  position: absolute;
+top:83%; left: 2%;
+height: 90px;
+min-width: 300px;
+color: white;
+background-color: rgba(0,0,0,0.7);
+font-size: 14px;
+}
+
+.divStats2{
+  border: 1px solid white;
+  border-radius: 4px;
+  position: absolute;
+top:83%; left: 35.5%;
+height: 90px;
+min-width: 300px;
+color: white;
+background-color: rgba(0,0,0,0.7);
+font-size: 14px;
+}
+
+.divStats3{
+  border: 1px solid white;
+  border-radius: 4px;
+  position: absolute;
+top:83%; left: 69%;
+height: 90px;
+min-width: 300px;
+color: white;
+background-color: rgba(0,0,0,0.7);
+font-size: 14px;
+}
+
+.playerImg{
+  width: 50px;
+  image-rendering: pixelated;
+}
+
+table{
+  height: 100%;
+  border-spacing: 0px;
+}
+
+td{
+  height: 100%;
+  padding: 5px;
+}
+
+.playerIdentity{
+  border-right: 1px solid white;
+}
+
+.bar{
+  width: 50px;
+}
+
+.barsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.progToPlanet{
+  position: absolute;
+top:5%; left: 77%;
+display: inline-block;
+white-space: nowrap;
+vertical-align: middle;
+}
+.barToPlanet{
+  height: 40px;
+  border-radius: 2px;
+  vertical-align:25%;
+  color: rgb(175, 56, 245);
+  border: 1px solid white;
+}
+.barToPlanet::-moz-progress-bar{
+   background: rgb(175, 56, 245);
+   }
+.barToPlanet::-webkit-progress-value {
+   background: rgb(175, 56, 245);
+}
+   progress::-webkit-progress-bar {
+  background: rgba(0,0,0,0.7);
+}
+
+.timeRemaining{
+  position: absolute;
+  top: 7.5%; left:82%;
+  color: white;
+}
+
+.imgDialog
+{
+width: 60px;
+border: 1px solid white;
+border-radius: 50%;
+image-rendering: pixelated;
+}
+
+.dialog{
+  position: absolute;
+  top: 3%; left: 2%;
+  background-color: rgba(0,0,0,0.85);
+  width: 1000px;
+  height: 90px;
+  border: 1px dashed white;
+  color: white;
+  visibility: hidden;
+  transition: visibility 0s linear 0.7s, opacity 0.7s ease-in-out;
+}
+
+.dialog.hidden{
+  opacity: 0; 
+  visibility:hidden;
+}
+
+.dialog.visible{
+  transition-delay: 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.clickToClose{
+  position: absolute;
+  top:0%;
+  left: 45%;
+  font-size: 12px;
+
+}
+
+.exit{
+  border-right: 1px solid white;
+  cursor: pointer;
+}
+.sound{
+  cursor: pointer;
+}
+
+
+.options{
+  position: absolute;
+  top: 20%;left: 90%;
+  color: white;
+  background-color:rgba(0,0,0,0.7);
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+
+@font-face {
+    font-family: 'karmafuture';
+    src: url('public/font/novem.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
