@@ -11,7 +11,8 @@ THE TEAM
     - bryan.duarte.dev@gmail.com.
 <br>
 
-- Aylin Galindo Acosta.
+- Aylin Galindo Acosta. [GitHub Profile.](https://github.com/aylingalindo) 
+    - aylingalindo@hotmail.com
 <br>
 
 - Maricela Saraí Elizondo Martínez.
